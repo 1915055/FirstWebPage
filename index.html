@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task1Ryaz</title>
     <style>
-        body{
+        body {
             background-color: hsl(233, 47%, 7%);
         }
 
@@ -27,6 +28,7 @@
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
         }
+
         img {
             width: 100%;
             height: 100%;
@@ -84,57 +86,245 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        @media screen and (min-width:300px) and (max-width:1420px){
-            .container{
+
+        @media screen and (min-width:280px) and (max-width:534px) {
+            .container {
                 height: 80vh;
                 display: grid;
                 grid-template-columns: none;
                 grid-template-rows: 1fr 2fr;
-                /* Instead of using grid-template-areas, we can set grid-row:1 for box2 and grid-row:2 for box1, that will bring box2 at the top i.e. image and box1 at
-                bottom*/
-                grid-template-areas: 'top'
-                                     'bottom';
-                margin-top:10vh;
-                margin-bottom:10vh;
+                /* we can also use grid-template-areas to take image at top and box1 at bottom*/
+                /* grid-template-areas: 'top'
+                                     'bottom'; */
+
+                margin-top: 10vh;
+                margin-bottom: 10vh;
             }
-            #box1{
-                height:55vh;
-                grid-area: bottom;
+
+            #box1 {
+                grid-row: 2;
+                height: 55vh;
+                /* grid-area: bottom; */
             }
-            #box2{
-                height:25vh;
-                grid-area: top;
+
+            #box2 {
+                grid-row: 1;
+                height: 25vh;
+                /* grid-area: top; */
             }
-            #stats{
+
+            #stats {
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-template-columns: none;
                 justify-content: center;
                 margin-bottom: 3rem;
-                margin-left:2rem;
-                margin-right:2rem;
-                grid-gap:1.5rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                grid-gap: 1.5rem;
             }
-            #heading{
-                margin-left:2rem;
-                margin-right:2rem;
+
+            #heading {
+                margin-left: 2rem;
+                margin-right: 2rem;
                 margin-top: 2rem;
                 text-align: center;
                 font-size: 1.4rem;
             }
-            #paragraph{
-                margin-left:2rem;
-                margin-right:2rem;
+
+            #paragraph {
+                margin-left: 2rem;
+                margin-right: 2rem;
                 text-align: center;
                 padding-bottom: 1rem;
-                padding-top:1rem;
-                font-size:0.7rem;
+                padding-top: 1rem;
+                font-size: 0.7rem;
             }
-            .top{
-                font-size:1rem;
+
+            .top {
+                font-size: 1rem;
             }
-            .bottom{
-                font-size:0.7rem;
+
+            .bottom {
+                font-size: 0.7rem;
+            }
+
+            @media screen and (min-height:760px){
+                #heading{
+                    font-size: 1.8rem;
+                }
+                #paragraph{
+                    font-size:1.1rem;
+                }
+                .top{
+                    font-size:1.4rem;
+                }
+                .bottom{
+                    font-size:1.1rem;
+                }
+                #stats{
+                    grid-gap:1.2rem;
+                }
+            }
+        }
+        @media screen and (min-width:534px) and (max-width:911px){
+            .container {
+                height: 80vh;
+                display: grid;
+                grid-template-columns: none;
+                grid-template-rows: 1fr 2fr;
+                /* we can also use grid-template-areas to take image at top and box1 at bottom*/
+                /* grid-template-areas: 'top'
+                                     'bottom'; */
+
+                margin-top: 10vh;
+                margin-bottom: 10vh;
+            }
+
+            #box1 {
+                grid-row: 2;
+                height: 55vh;
+                /* grid-area: bottom; */
+            }
+
+            #box2 {
+                grid-row: 1;
+                height: 25vh;
+                /* grid-area: top; */
+            }
+
+            #stats {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: none;
+                justify-content: center;
+                margin-bottom: 3rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                grid-gap: 1.5rem;
+            }
+
+            #heading {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.2rem;
+            }
+
+            #paragraph {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                text-align: center;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                font-size: 1.4rem;
+            }
+
+            .top {
+                font-size: 1.8rem;
+            }
+
+            .bottom {
+                font-size: 1.4rem;
+            }
+
+            @media screen and (max-height:1000px) {
+                #heading{
+                    font-size:1.6rem;
+                }
+                #paragraph{
+                    font-size:1rem;
+                }
+                .top{
+                    font-size:1.3rem;
+                }
+                .bottom{
+                    font-size:1rem;
+                }
+
+            }
+        }
+
+        @media screen and (min-width:912px) and (max-width:1440px) {
+            .container {
+                height: 80vh;
+                display: grid;
+                grid-template-columns: none;
+                grid-template-rows: 1fr 2fr;
+                /* we can also use grid-template-areas to take image at top and box1 at bottom*/
+                /* grid-template-areas: 'top'
+                                     'bottom'; */
+
+                margin-top: 10vh;
+                margin-bottom: 10vh;
+            }
+
+            #box1 {
+                grid-row: 2;
+                height: 55vh;
+                /* grid-area: bottom; */
+            }
+
+            #box2 {
+                grid-row: 1;
+                height: 25vh;
+                /* grid-area: top; */
+            }
+
+            #stats {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: none;
+                justify-content: center;
+                margin-bottom: 3rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                grid-gap: 1.5rem;
+            }
+
+            #heading {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.6rem;
+            }
+
+            #paragraph {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                text-align: center;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .top {
+                font-size: 2rem;
+            }
+
+            .bottom {
+                font-size: 1.58rem;
+            }
+
+            @media only screen and (max-height: 1024px) {
+                #heading {
+                    font-size: 1.8rem;
+                }
+
+                #paragraph {
+                    font-size: 1rem;
+                }
+
+                .top {
+                    font-size: 1.4rem;
+                }
+
+                .bottom {
+                    font-size: 1rem;
+                }
+
             }
         }
     </style>
