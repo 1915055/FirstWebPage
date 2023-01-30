@@ -90,6 +90,8 @@
                 display: grid;
                 grid-template-columns: none;
                 grid-template-rows: 1fr 2fr;
+                /* Instead of using grid-template-areas, we can set grid-row:1 for box2 and grid-row:2 for box1, that will bring box2 at the top i.e. image and box1 at
+                bottom*/
                 grid-template-areas: 'top'
                                      'bottom';
                 margin-top:10vh;
